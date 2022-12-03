@@ -1,0 +1,94 @@
+/* GLOBAL */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0 auto;
+  font-size: 2rem;
+  font-family: Arial;
+  background: rgb(39, 2, 39);
+  color: #fff;
+}
+
+
+/* HEADER */
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* MAIN */
+
+main {
+  margin: 0 auto;
+}
+
+/* MORPION (div#morpion) */
+
+#morpion {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.case {
+  border: solid 5px #000;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  line-height: 90px;
+}
+
+
+/* WIN */
+
+#win {
+  text-align: center;
+  color: green;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+#result {
+  text-align: center;
+  margin: 50px 0 0 0;
+  color: green;
+  font-weight: bold;
+}
+
+
+/* ANIM WIN */
+
+@keyframes rotate-in-center {
+  0% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+    opacity: 1;
+  }
+}
+
+.rotate-in-center {
+  animation: rotate-in-center 1.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+#hidder {
+  width: 800px;
+  height: 800px;
+  z-index: 1;
+  position: absolute;
+ left: -10000px;
+}
